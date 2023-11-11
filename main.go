@@ -1,9 +1,16 @@
 package main
 
 import (
-	"github.com/jrgustavo/course-go-zero/variables"
+	"fmt"
+	"runtime"
 )
 
 func main() {
-	variables.RestoVariables()
+
+	if os := runtime.GOOS; os == "Linux" || os == "OS X. " {
+		fmt.Println("Esto es Windows")
+	} else {
+		fmt.Println("Esto es Windwdos ", os)
+	}
+
 }
